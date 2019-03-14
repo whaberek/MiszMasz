@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import { Button } from 'shared/components'
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     container: {
         position: 'absolute',
         bottom: 120,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     title: {
         color: colors.white,
@@ -20,22 +20,19 @@ const styles = StyleSheet.create({
     },
     button: {
         color: colors.accent,
-    }
+    },
 });
 
-class HomeInfo extends PureComponent {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>
-                    {HOME.SLOGAN}
-                </Text>
-                <Button
-                    title={HOME.START}
-                />
-            </View>
-        );
-    }
-}
+const StartInfo = ({ navigation }) => (
+    <View style={styles.container}>
+        <Text style={styles.title}>
+            {HOME.SLOGAN}
+        </Text>
+        <Button
+            title={HOME.START}
+            onPress={() => navigation.navigate('Search')}
+        />
+    </View>
+);
 
-export { HomeInfo };
+export { StartInfo };

@@ -3,6 +3,10 @@ import { StyleSheet, ActivityIndicator } from 'react-native';
 
 import { colors } from 'shared/variables/colors'
 
+const styles = StyleSheet.create({
+    loader: { padding: 20 },
+});
+
 const ContentLoading = ({ loading, children }) => (
     loading
         ? <ActivityIndicator
@@ -12,9 +16,5 @@ const ContentLoading = ({ loading, children }) => (
         />
         : children
 );
-
-const styles = StyleSheet.create({
-    loader: { padding: 20 },
-});
 
 export { ContentLoading }

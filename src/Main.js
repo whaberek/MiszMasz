@@ -2,11 +2,12 @@ import React, { PureComponent } from 'react';
 import SplashScreen from 'react-native-splash-screen';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import { Start } from 'scenes';
+import { Start, Search } from 'scenes';
 
 const AppNavigator = createStackNavigator(
     {
         Start: Start,
+        Search: Search,
     },
     {
         initialRouteName: 'Start',

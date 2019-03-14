@@ -3,15 +3,6 @@ import { StyleSheet, ImageBackground } from 'react-native';
 
 import { colors } from 'shared/variables/colors'
 
-const Background = ({ children }) => (
-    <ImageBackground
-        style={styles.container}
-        source={require('assets/images/background.png')}
-    >
-        { children }
-    </ImageBackground>
-);
-
 const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.black,
@@ -22,5 +13,14 @@ const styles = StyleSheet.create({
         height: '100%',
     },
 });
+
+const Background = ({ source, children }) => (
+    <ImageBackground
+        style={styles.container}
+        source={source}
+    >
+        { children }
+    </ImageBackground>
+);
 
 export { Background };

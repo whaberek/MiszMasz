@@ -1,4 +1,4 @@
-import { colors } from '../variables/colors'
+import { colors } from 'shared/variables/colors'
 
 const navigationStyle = {
     headerStyle: {
