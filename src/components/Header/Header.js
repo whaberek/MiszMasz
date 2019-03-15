@@ -6,10 +6,9 @@ import { colors } from 'shared/variables/colors';
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: Platform.OS === 'ios' ? 29 : 0,
         alignItems: 'center',
         borderBottomWidth: 1,
-        borderBottomColor: colors.gray,
+        borderBottomColor: colors.grayAlpha,
     },
     image: {
         width: 110,

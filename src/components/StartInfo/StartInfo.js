@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { Button } from 'shared/components'
 import { colors } from 'shared/variables/colors'
-import { HOME } from 'shared/constants/home'
+import { START } from 'shared/constants/start'
 
 const styles = StyleSheet.create({
     container: {
@@ -26,10 +26,10 @@ const styles = StyleSheet.create({
 const StartInfo = ({ navigation }) => (
     <View style={styles.container}>
         <Text style={styles.title}>
-            {HOME.SLOGAN}
+            {START.SLOGAN}
         </Text>
         <Button
-            title={HOME.START}
+            title={START.START}
             onPress={() => navigation.navigate('Search')}
         />
     </View>

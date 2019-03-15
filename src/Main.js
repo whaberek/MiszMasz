@@ -1,17 +1,28 @@
 import React, { PureComponent } from 'react';
-import SplashScreen from 'react-native-splash-screen';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import SplashScreen from 'react-native-splash-screen';
 
-import { Start, Search } from 'scenes';
+import { Start, Search, Images } from 'scenes';
+
+import { colors } from 'shared/variables/colors';
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: colors.black,
+    },
+});
 
 const AppNavigator = createStackNavigator(
     {
         Start: Start,
         Search: Search,
+        Images: Images,
     },
     {
         initialRouteName: 'Start',
-        headerMode: 'none'
+        headerMode: 'none',
     },
 );
 
@@ -23,7 +34,11 @@ class MainApp extends PureComponent {
     }
 
     render() {
-        return <AppContainer />;
+        return (
+            <SafeAreaView style={styles.container}>
+                <AppContainer/>
+            </SafeAreaView>
+        );
     }
 }
 
