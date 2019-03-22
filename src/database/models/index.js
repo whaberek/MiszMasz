@@ -1,0 +1,1 @@
+export { TilesSchema } from './TilesSchema'
